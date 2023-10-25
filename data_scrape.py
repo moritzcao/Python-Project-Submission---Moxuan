@@ -15,7 +15,7 @@ for page in range(0, 20):
         driver.get(f'https://www.imdb.com/search/title/?groups=top_1000&start={(page*50)+1}&ref_=adv_nxt')
 
     try:
-        # Find the "blocks" on the page, which are cells that
+        # Find the "blocks" on the page, which are single cells that contains movie info
         movie_blocks = driver.find_elements_by_xpath('//div[@class="lister-item mode-advanced"]')
         print(f'Scraping info from page {page+1}')
 
